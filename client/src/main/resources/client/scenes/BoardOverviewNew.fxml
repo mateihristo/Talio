@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.BoardOverviewCtrl">
+   <children>
+      <AnchorPane fx:id="toolBar" layoutX="203.0" layoutY="-23.0" prefHeight="99.0" prefWidth="690.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="22.0" style="-fx-background-radius: 1em;" text="x" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+               <effect>
+                  <Glow />
+               </effect></Button>
+            <Button fx:id="maximizeButton" mnemonicParsing="false" onAction="#maxMin" prefHeight="25.0" prefWidth="15.0" style="-fx-background-radius: 1em;" text="□" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="3.0">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="23.0" style="-fx-background-radius: 1em;" text="-" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="3.0">
+               <effect>
+                  <Glow />
+               </effect></Button>
+            <Button fx:id="disconnectButton" layoutX="610.0" layoutY="38.0" mnemonicParsing="false" onAction="#disconnect" text="Disconnect" AnchorPane.rightAnchor="5.199999999999974" AnchorPane.topAnchor="38.0" />
+            <Button fx:id="customizationbutton" layoutX="507.0" layoutY="38.0" mnemonicParsing="false" onAction="#customization" text="Customization" AnchorPane.rightAnchor="91.39999999999998" AnchorPane.topAnchor="38.0" />
+            <Button fx:id="howToDrag" layoutX="560.0" layoutY="72.0" mnemonicParsing="false" onAction="#howToDragInfo" text="How to drag &amp; drop" AnchorPane.bottomAnchor="3.200000000000003" AnchorPane.rightAnchor="5.199999999999974">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="boardTitle" layoutX="29.0" layoutY="35.0" prefHeight="42.0" prefWidth="174.0" text="Title" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ScrollPane layoutX="2.0" layoutY="106.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="427.0" prefWidth="686.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="100.0">
+         <content>
+            <TilePane fx:id="tilePane" hgap="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefColumns="6" prefHeight="800" prefRows="10">
+               <children>
+                  <VBox fx:id="v1" prefHeight="360.0" prefWidth="180.0">
+                     <children>
+                        <Button fx:id="addList" minHeight="-Infinity" minWidth="35.0" mnemonicParsing="false" onAction="#addNewList" prefHeight="41.0" prefWidth="174.0" style="-fx-background-radius: 100;" text="+ Add New List" textFill="#080808" />
+                     </children>
+                     <TilePane.margin>
+                        <Insets top="10.0" />
+                     </TilePane.margin>
+                     <padding>
+                        <Insets bottom="100.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+            </TilePane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="renameBoardBtn" layoutX="211.0" layoutY="43.0" mnemonicParsing="false" onAction="#renameBoardTitle" text="Rename" />
+   </children>
+</AnchorPane>

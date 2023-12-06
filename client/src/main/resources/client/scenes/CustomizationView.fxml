@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="525.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CustomizationCtrl">
+    <children>
+        <Pane fx:id="toolBar" layoutX="6.0" layoutY="1.0" prefHeight="34.0" prefWidth="518.0">
+            <children>
+                <Button fx:id="closeButton" layoutX="465.0" layoutY="6.0" mnemonicParsing="false" onAction="#close" prefHeight="27.0" prefWidth="29.0" style="-fx-background-radius: 1em;" text="x" />
+                <Button fx:id="minimizeButton" layoutX="430.0" layoutY="6.0" mnemonicParsing="false" onAction="#minimize" prefHeight="27.0" prefWidth="29.0" style="-fx-background-radius: 1em;" text="-" />
+            </children>
+        </Pane>
+      <Text layoutX="29.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customization" wrappingWidth="115.97845458984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Colors" wrappingWidth="115.97845458984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Colors" wrappingWidth="115.97845458984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Colors" wrappingWidth="115.97845458984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="boardreset" layoutX="431.0" layoutY="71.0" mnemonicParsing="false" onAction="#boardreset" prefHeight="26.0" prefWidth="52.0" text="reset" />
+      <Button fx:id="listreset" layoutX="431.0" layoutY="176.0" mnemonicParsing="false" onAction="#listreset" prefHeight="26.0" prefWidth="52.0" text="reset" />
+      <Line endX="362.8000183105469" endY="-7.62939453125E-6" layoutX="130.0" layoutY="62.0" startX="-100.0" />
+      <Line endX="362.8000183105469" endY="-7.62939453125E-6" layoutX="130.0" layoutY="277.0" startX="-100.0" />
+      <Text layoutX="87.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background" />
+      <Text layoutX="87.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Font" />
+      <ColorPicker fx:id="boardbackgroundcp" layoutX="442.0" layoutY="102.0" onAction="#boardchangebackground" prefHeight="26.0" prefWidth="29.0" />
+      <ColorPicker fx:id="boardfontcp" layoutX="442.0" layoutY="131.0" onAction="#boardchangefont" prefHeight="26.0" prefWidth="29.0" />
+      <Text layoutX="87.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background" />
+      <Text layoutX="87.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Font" />
+      <ColorPicker fx:id="listbackgroundcp" layoutX="442.0" layoutY="205.0" onAction="#listchangebackground" prefHeight="26.0" prefWidth="29.0" />
+      <ColorPicker fx:id="listfontcp" layoutX="442.0" layoutY="234.0" onAction="#listchangefont" prefHeight="26.0" prefWidth="29.0" />
+      <Text layoutX="201.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background" />
+      <Text layoutX="300.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Font" />
+      <ScrollPane layoutX="29.0" layoutY="318.0" prefHeight="200.0" prefWidth="464.0">
+         <content>
+            <VBox fx:id="taskpresets">
+               <children>
+                  <Button fx:id="addbutton" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#addpreset" text="Add Preset" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

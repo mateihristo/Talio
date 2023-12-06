@@ -1,0 +1,5 @@
+rootProject.name = 'Team 44 task orginazer'
+
+include 'client'
+include 'server'
+include 'commons'

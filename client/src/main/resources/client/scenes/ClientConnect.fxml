@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ClientConnectCtrl">
+
+<children>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+          <BorderPane prefHeight="529.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      
+              <!-- Top Section -->
+              <top>
+                  <HBox maxWidth="1.7976931348623157E308" style="-fx-background-color: #2F4F4F;" BorderPane.alignment="TOP_CENTER">
+                      <Label style="-fx-font-size: 24; -fx-text-fill: white; -fx-padding: 20;" text="Talio" />
+                  </HBox>
+              </top>
+      
+              <!-- Center Section -->
+              <center>
+                  <VBox alignment="CENTER" spacing="20" style="-fx-padding: 50;" BorderPane.alignment="CENTER">
+                      <Label style="-fx-font-size: 16;" text="Server Address:" />
+      
+                      <TextField fx:id="serverAddressField" maxWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="30.0" prefWidth="289.0" promptText="Server Address" style="-fx-background-color: #f5f5f5; -fx-border-color: #cccccc; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 5px;" />
+      
+                      <Button fx:id="connectButton" onAction="#connectToServer" style="-fx-background-color: #2F4F4F; -fx-text-fill: white; -fx-font-size: 16; -fx-padding: 10px 20px; -fx-border-radius: 5px" text="Connect" />
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </VBox>
+              </center>
+          </BorderPane>
+         </children>
+      </AnchorPane>
+
+    <AnchorPane fx:id="toolBar" layoutX="203.0" layoutY="-23.0" prefHeight="30.0" prefWidth="671.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="22.0" style="-fx-background-radius: 1em;" text="x" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                <effect>
+                    <Glow />
+                </effect></Button>
+            <Button fx:id="maximizeButton" mnemonicParsing="false" onAction="#maxMin" prefHeight="25.0" prefWidth="15.0" style="-fx-background-radius: 1em;" text="□" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="3.0">
+                <effect>
+                    <Glow />
+                </effect>
+            </Button>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="23.0" style="-fx-background-radius: 1em;" text="-" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="3.0">
+                <effect>
+                    <Glow />
+                </effect></Button>
+        </children>
+    </AnchorPane>
+
+</children>
+</AnchorPane>
